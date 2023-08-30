@@ -1,2 +1,0 @@
-# katuhair.ru
-# katuhair.ru
