@@ -1,0 +1,1744 @@
+@font-face {
+    font-family: i8sans;
+    /*    src: url("fonts/P22UndergroundCYProBook.woff") format("woff"), url("fonts/P22UndergroundCYProBook.svg") format("woff");*/
+    src: url("fonts/bureausans.woff") format("woff"), url("fonts/bureausans.svg") format("woff");
+
+    font-weight: 400;
+    font-style: normal
+}
+
+
+
+
+* {
+    font-family: i8sans, "Helvetica Neue", "Arial", sans-serif;
+}
+
+
+body {
+    margin: 0px;
+/*    min-height: 1280px;*/
+}
+
+a {
+    color: #008fff;
+}
+
+p {
+    font-size: larger;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+container {
+    display: block;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+
+.visible {
+    display: block !important;
+}
+
+.no-visible {
+    display: none;
+}
+
+
+
+
+.color-green {
+    color: darkgreen;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-deeppink {
+    color: deeppink;
+}
+
+
+.color-blueviolet {
+    color: blueviolet;
+}
+
+.color-tomato {
+    color: orangered;
+}
+
+.color-mediumturquoise {
+    color: fuchsia;
+}
+
+.color-royalblue {
+    color: royalblue;
+}
+
+.color-forestgreen {
+    color: forestgreen;
+}
+
+.color-firebrick {
+    color: firebrick;
+}
+
+.color-darkblue {
+    color: darkblue;
+}
+
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+
+.margintop-50 {
+    margin-top: 50px;
+}
+
+
+@keyframes spinning-circle {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150.6 100.4;
+    }
+
+    50% {
+        stroke-dasharray: 1 250;
+    }
+
+    100% {
+        stroke-dashoffset: 502;
+        stroke-dasharray: 150.6 100.4;
+    }
+}
+
+.spinner__circle {
+    animation: 2s linear spinning-circle infinite;
+}
+
+.spinner {
+    display: none;
+    padding: 47%;
+}
+
+.update-icon {
+    background-image: url(img/upd3.svg);
+    background-repeat: no-repeat;
+    text-align: right;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    border-bottom: 1px solid gainsboro;
+    font-size: smaller;
+}
+
+.update-icon:hover {
+    color: black;
+    border-color: black;
+}
+
+
+
+
+
+
+@media (min-width: 200px) and (max-width: 1200px) {
+
+    .catalog {
+        font-size: xx-large;
+    }
+
+    h2 {
+        font-size: xxx-large;
+        font-weight: normal;
+    }
+
+    .catalog > .buy-row {
+        width: 100%;
+    }
+
+    .catalog > .buy-row > .buy-element > .img {
+        height: 50px;
+        width: 50px;
+        margin-top: 33px;
+        margin-left: 42px;
+    }
+
+    .catalog > .buy-row > .buy-element > .header-buy-btn {
+        font-size: xxx-large;
+        padding: 32px 42px 22px 107px;
+    }
+
+
+    .hide-desc-btn {
+        background-size: 50px;
+        padding-left: 60px;
+        width: auto;
+    }
+
+
+    header {
+        padding: 35px 10px 30px 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    header .buy-element > .header-buy-btn {
+        font-size: xx-large;
+        padding: 25px 40px 20px 100px;
+        display: none;
+    }
+
+    header .buy-element > .img {
+        height: 45px;
+        width: 45px;
+        margin-top: 20px;
+        margin-left: 35px;
+        display: none;
+    }
+
+
+
+    header .menu-element > .header-menu-btn {
+        font-size: xx-large;
+        padding: 25px 40px 20px 80px;
+    }
+
+    header .menu-element > .img {
+        height: 45px;
+        width: 45px;
+        margin-top: 35px;
+        margin-left: 35px;
+    }
+
+
+
+
+
+    header .contact-element {
+        display: none;
+    }
+
+    .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .portfolio-item {
+        flex-basis: 48%;
+    }
+
+    .example__menu-item {
+        margin: 9px 12px 9px;
+    }
+
+    .example__menuLimiter.is__shaded {
+        -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .25) 9px, #000 18px, #000 calc(100% - 18px), rgba(0, 0, 0, .25) calc(100% - 9px), transparent);
+        mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .25) 9px, #000 18px, #000 calc(100% - 18px), rgba(0, 0, 0, .25) calc(100% - 9px), transparent);
+    }
+
+    footer{
+    	flex: 0 0 auto;
+    }
+    
+    footer .footer-block {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    footer .footer-block > .footer-links {
+        flex: 4;
+    }
+
+    footer .footer-block > .footer-contacts > .contact-phone {
+        background: #ffebae;
+        font-weight: bold;
+        padding: 7px 16px 5px 16px;
+        border-radius: 6px;
+        max-width: max-content;
+        cursor: pointer;
+    }
+
+    footer .likely .likely__widget {
+        font-size: 24px;
+    }
+
+    footer .likely .likely__widget {
+        background: none;
+    }
+
+    .catalog > h1 {
+        display: none;
+    }
+
+    .portfolio {
+        margin-top: 80px;
+    }
+
+    .catalog-block {
+        height: 80px;
+    }
+
+    .catalog-block > .catalog-item > div {
+        font-size: xx-large;
+        height: 75%;
+        padding: 18px 17px 0px 80px;
+    }
+
+    .catalog-block > .catalog-item > .no-icon {
+        padding-left: 17px;
+    }
+
+    .coloring > .catalog-block > .catalog-item > div {
+        padding: 18px 17px 0px 18px;
+    }
+
+
+
+    .checkbox-item {
+        font-size: xxx-large;
+        padding-top: 15px;
+    }
+
+    .checkbox-item:first-child {
+        font-size: 60px;
+    }
+
+    .catalog > .buy-block > p .price {
+        background-size: 48px;
+        padding: 2px 67px 2px 20px;
+        background-position: right 12px bottom 13px;
+    }
+
+    .logo > a > .img {
+        height: 72px;
+    }
+
+    .logo > a > main {
+        font-size: xx-large;
+    }
+
+
+
+
+
+    .promo-block > .promo-offer > .promo-text {
+        padding: 30px 0px 10px 20px;
+        font-size: xxx-large;
+    }
+
+
+    .promo > .desc .update {
+        text-align: center;
+        font-size: xxx-large;
+        border-radius: 6px;
+        margin-top: -50px;
+        border: 1px solid;
+        color: black;
+        background-color: #ffffff;
+        height: 50px;
+        background-size: 70px;
+        padding: 15px 70px 16px 15px;
+        background-position: right 0px bottom 0px;
+    }
+
+    .promo > .desc div {
+        font-size: xx-large;
+    }
+
+    footer .footer-block {
+        font-size: xx-large;
+    }
+
+    footer .footer-block > .footer-contacts {
+        flex: 2;
+    }
+
+    footer .footer-contacts > .contact-item > div {
+        height: 30px;
+        width: 30px;
+        margin-top: 4px;
+        margin-right: 5px;
+    }
+
+    .day-calendar > div {
+        padding: 10px 0px 10px 10px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .modal-container h2 {
+        font-size: xxx-large;
+    }
+
+    .modal-container {
+        font-size: xx-large;
+    }
+
+    .select-block > .contact-select > div > input {
+        font-size: xx-large;
+    }
+
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .portfolio-item {
+        flex-basis: 31%;
+    }
+
+
+
+    .example__menu-item {
+        margin: 10px 20px 10px 0px;
+    }
+
+    .example__menuLimiter.is__shaded {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    footer .footer-block {
+        /*
+        padding-left: 10px;
+        padding-right: 10px;
+*/
+    }
+
+    footer .footer-block > .footer-links {
+        flex: 7;
+    }
+
+    .content {
+        display: flex;
+    }
+
+    .mobile-h1 {
+        display: none;
+    }
+
+
+    .portfolio {
+        margin-top: 40px;
+    }
+
+    .hide-desc-btn {
+        background-size: 16px;
+        padding-left: 19px;
+        width: max-content;
+    }
+
+    .catalog-block {
+        height: 55px;
+    }
+
+    .catalog-block > .catalog-item > div {
+        height: 70%;
+        font-size: 20px;
+        padding: 15px 10px 0px 60px;
+    }
+
+    .catalog-block > .catalog-item > .no-icon {
+        padding-left: 10px;
+    }
+
+    .coloring > .catalog-block > .catalog-item > div {
+        padding: 15px 10px 0px 15px;
+    }
+
+    .checkbox-item {
+        font-size: 20px;
+        padding-top: 24px;
+    }
+
+    .checkbox-item:first-child {
+        font-size: 40px;
+    }
+
+    .catalog > .buy-block > p .price {
+        background-size: 18px;
+        padding: 3px 28px 2px 10px;
+        background-position: right 9px bottom 6px;
+    }
+
+
+    .catalog > .buy-row > .buy-element > .img {
+        height: 25px;
+        width: 25px;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+
+    .catalog > .buy-row > .buy-element > .header-buy-btn {
+        font-size: larger;
+        padding: 10px 15px 10px 60px;
+    }
+
+    header {
+        padding: 35px 0px 30px 0px;
+    }
+
+
+
+
+
+    header .buy-element > .img {
+        height: 20px;
+        width: 20px;
+        margin-top: 11px;
+        margin-left: 42px;
+    }
+
+    header .buy-element > .header-buy-btn {
+        font-size: larger;
+        padding: 10px 35px 10px 70px;
+    }
+
+
+    header .menu-element > .img {
+        height: 20px;
+        width: 20px;
+        margin-top: 11px;
+        margin-left: 18px;
+        display: none;
+    }
+
+    header .menu-element > .header-menu-btn {
+        font-size: larger;
+        padding: 10px 15px 10px 51px;
+        display: none;
+    }
+
+
+    header .contact-element {
+        display: block;
+    }
+
+
+
+
+    .logo > a > .img {
+        height: 40px;
+    }
+
+
+
+
+    .promo-block > .promo-offer > .promo-text {
+        padding: 50px 0px 0px 50px;
+        font-size: xx-large;
+    }
+
+
+    .promo > .desc .update {
+        text-align: right;
+        border-bottom: 1px solid gainsboro;
+        font-size: smaller;
+    }
+
+    footer .footer-block > .footer-contacts {
+        flex: 1;
+    }
+
+    .day-calendar > div {
+        padding: 10px 0px 10px 10px;
+    }
+
+    .modal-container h2 {
+        font-size: xx-large;
+    }
+
+    .modal-container {
+        font-size: 20px;
+    }
+
+    .logo > a > main {
+        line-height: 17pt;
+        font-size: larger;
+    }
+
+    .select-block > .contact-select > div > input {
+        font-size: larger;
+    }
+
+}
+
+
+
+
+
+
+
+/*header*/
+
+header {
+    display: flex;
+}
+
+
+
+
+.logo {
+    flex: 5;
+    align-items: center;
+}
+
+.logo > a {
+    color: black;
+}
+
+.logo > a > main {
+    float: left;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.logo > a > main > .desc {
+    color: #ff734d;
+}
+
+.logo > a > .img {
+    float: left;
+    margin-top: 2px;
+}
+
+
+
+
+header .contacts-block {
+    flex: 5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header .contact-element {
+    font-size: larger;
+    padding-top: 10px;
+    margin-right: 30px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    border-bottom: 1px solid lightgray;
+    color: black;
+}
+
+header .contact-element:hover {
+    border-color: black;
+}
+
+
+
+
+
+.buy-element {
+    background: #27b1e7;
+    border-radius: 6px;
+    text-decoration-line: none;
+}
+
+.buy-element > .header-buy-btn {
+    width: max-content;
+    cursor: pointer;
+    color: white;
+}
+
+.buy-element > .img {
+    background: url(img/watch7.svg) no-repeat;
+    float: left;
+}
+
+.buy-element:hover {
+    background: #308df1;
+}
+
+
+
+
+
+.menu-element {
+    background: #27b1e7;
+    border-radius: 6px;
+    text-decoration-line: none;
+}
+
+.menu-element > .header-menu-btn {
+    width: max-content;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-element > .img {
+    background: url(img/arrow.svg) no-repeat;
+    float: left;
+}
+
+.menu-element:hover {
+    background: #308df1;
+}
+
+
+
+
+
+
+.promo-block {
+    display: flex;
+}
+
+.promo-block > .promo-offer {
+    flex: 5;
+    background: #ffebae;
+    display: flex;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.promo-block > .promo-offer > .promo-text {
+    flex: 2;
+    font-weight: bold;
+}
+
+
+
+.promo-block > .promo-offer > .promo-text span {
+    color: #308df1;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.promo-block > .promo-offer > .promo-text span:hover {
+    color: black;
+}
+
+
+
+
+.promo-block > .promo-img {
+    flex: 1;
+    margin-left: 2%;
+    color: gray;
+    cursor: pointer;
+}
+
+.promo-block > .promo-img:hover {
+    color: black;
+}
+
+
+.promo-img-src {
+    width: 100%;
+}
+
+.promo-block > .promo-img > .promo-img-src > img {
+    border-radius: 6px;
+}
+
+
+
+.promo-block > .promo-img > .promo-img-desc {
+    text-align: right;
+    min-height: 21px;
+}
+
+
+/*nav*/
+
+nav {
+    display: flex;
+    margin-top: 30px;
+}
+
+.checkbox-item {
+    text-align: center;
+    margin-right: 30px;
+    cursor: pointer;
+    color: #007bff;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkbox-item:hover {
+    color: black;
+}
+
+
+.checkbox-item:first-child {
+    color: black;
+    padding-top: 0px;
+    border-bottom: none;
+    margin-right: 30px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+
+
+.promo-block > .promo-offer > .promo-text > .supertext-master {
+    font-size: medium;
+    font-weight: normal;
+    margin-top: 100px;
+}
+
+
+/*РАЗОБРАТЬСЯ ЧТО К ЧЕМУ*/
+
+.module {
+    -webkit-font-smoothing: subpixel-antialiased;
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    flex-shrink: 0;
+}
+
+.headinglabel {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+.example-result {
+    order: -1;
+    margin-bottom: 15px;
+}
+
+.example-codes {
+    display: flex;
+}
+
+.example-codes .example-code {
+    margin-right: 50px;
+}
+
+.example-codes .example-code:last-child {
+    margin-right: 0;
+}
+
+.example code {
+    margin-bottom: 0;
+}
+
+.example__menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.example__menuLimiter {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+
+.example__menuWrapper {
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-width: 0 1px;
+}
+
+.example__menuWrapper:last-child {
+    margin-bottom: 0;
+}
+
+.example__simpleWrapper {
+    overflow: visible;
+    border: solid #000;
+    border-width: 0 1px;
+    width: 355px;
+}
+
+.example__menuWrapper .example__menuLimiter {
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+}
+
+
+.example__menu-item:last-child {
+    margin-right: 0 !important;
+    padding-right: 10px;
+}
+
+.example__menu-item a {
+    color: #000;
+    border: 0;
+    box-shadow: none;
+}
+
+.example__menu-item a:hover {
+    color: #e30016;
+}
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    .example__menu-item {
+        margin-right: 18px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .example__menu-item {
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .example__menu-item {
+        margin-right: 9px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .example__menu-item {
+        margin-right: 18px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .example__menu-item {
+        margin-right: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contacts_mobile {
+    margin: 20px 0px 40px 0px;
+}
+
+#contacts_mobile > a {
+    font-size: xxx-large;
+    text-decoration: none
+}
+
+
+.contact-m-item {
+    border-top: 1px solid gainsboro;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+#update_block {
+    display: none;
+}
+
+
+.catalog-block {
+    display: flex;
+    margin-top: 40px;
+}
+
+
+.coloring > .catalog-block > .catalog-item {
+    color: inherit;
+}
+
+.catalog-block > .catalog-item {
+    flex: 1;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px;
+    color: #007bff;
+}
+
+.catalog-block > .catalog-item:hover {
+    background: #ffebae;
+    color: black;
+}
+
+.catalog-block > .catalog-item > div {
+    width: max-content;
+}
+
+
+.catalog-block > .selected {
+    background: #ffebae;
+    border-color: transparent;
+    color: black !important;
+    cursor: default;
+}
+
+
+
+
+
+.kare {
+    background: url(img/catalog/kare.svg) no-repeat;
+}
+
+.kaskad {
+    background: url(img/catalog/bob.svg) no-repeat;
+}
+
+.bob {
+    background: url(img/catalog/kaskad.svg) no-repeat;
+}
+
+.pixi {
+    background: url(img/catalog/pixi.svg) no-repeat;
+}
+
+.odna {
+    background: url(img/catalog/odna.svg) no-repeat;
+}
+
+.lesenka {
+    background: url(img/catalog/lesenka.svg) no-repeat;
+}
+
+.sesson {
+    background: url(img/catalog/sesson.svg) no-repeat;
+}
+
+
+.colors {
+    background: url(img/coloring.svg) no-repeat;
+}
+
+.cutter {
+    background: url(img/cutter.svg) no-repeat;
+}
+
+.star {
+    background: url(img/star.svg) no-repeat;
+}
+
+
+
+
+/*content*/
+
+.content {
+    margin-top: 40px;
+}
+
+.promo {
+    flex: 1;
+    padding-right: 30px;
+}
+
+
+
+#promo_img {
+    width: 100%;
+    border: 1px solid gainsboro;
+    display: none;
+}
+
+.promo > .desc {
+    color: gray;
+    display: flex;
+    margin-top: 5px;
+}
+
+.promo > .desc div {
+    flex: 8;
+}
+
+.promo > .desc .update {
+    background-image: url(img/upd3.svg);
+    background-repeat: no-repeat;
+    text-align: right;
+    flex: 1;
+    cursor: pointer;
+}
+
+.promo > .desc .update:hover {
+    color: black;
+    border-color: black;
+}
+
+
+
+
+.catalog {
+    flex: 2;
+}
+
+.catalog > h1 {
+    margin-top: 0px;
+}
+
+.mobile-h1 {
+    margin-top: 80px;
+}
+
+
+.catalog .buy-btn {
+    flex: 1;
+    background: #ffebae;
+    float: left;
+    padding: 8px 20px 8px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.catalog .buy-btn:hover {
+    background: white;
+    border: 1px solid #07b93e;
+}
+
+
+
+.catalog > .buy-block > p .price {
+    font-size: larger;
+    background-image: url(img/ruble3.svg);
+    background-repeat: no-repeat;
+    background-color: #dbf4f4;
+    border-radius: 5px;
+}
+
+.price-mobile {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+
+
+.buy-row {
+    display: flex;
+    width: max-content;
+}
+
+
+
+.buy-row > .contact-me {
+    flex: 1;
+    padding: 7px 20px 7px 20px;
+}
+
+
+
+.hide-desc-btn {
+    cursor: pointer;
+    color: #477fff;
+    background-image: url(img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: left -1px bottom 4px;
+    border-bottom: 1px solid lightgray;
+    font-size: larger;
+    margin-bottom: 7px;
+}
+
+
+.hide-desc-btn:hover {
+    color: black;
+}
+
+#hide_desc_block > p {
+    margin: 0px;
+}
+
+.service-desc-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin-top: 0px;
+    font-size: larger;
+}
+
+/*portfolio*/
+
+
+.portfolio-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.portfolio-item {
+    margin-right: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+
+.portfolio-item > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid gainsboro;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*booking*/
+h2 {
+    margin-top: 50px;
+}
+
+.day-calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day-calendar > div {
+    flex-basis: 13%;
+    /*    font-weight: bold;*/
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 6px;
+}
+
+.day-calendar > div:nth-child(6) {
+    color: red;
+}
+
+.day-calendar > div:nth-child(7) {
+    color: red;
+}
+
+.day-calendar > div:nth-child(13) {
+    color: red;
+}
+
+.day-calendar > div:nth-child(14) {
+    color: red;
+}
+
+.day-calendar > div:nth-child(20) {
+    color: red;
+}
+
+.day-calendar > div:nth-child(21) {
+    color: red;
+}
+
+
+.day-calendar > .today {
+    border: 2px solid gold;
+    padding: 8px 0px 8px 8px;
+    opacity: .4;
+}
+
+.day-calendar > .last-day {
+    opacity: .4 !important;
+}
+
+.day-calendar > .select-day {
+    cursor: pointer;
+}
+
+.day-calendar > .select-day:hover {
+    background: #ffebae;
+}
+
+.day-calendar > .selected {
+    background: #ffebae;
+}
+
+
+
+
+
+
+.day-booking {
+    padding: 1px 20px 20px 20px;
+    border-radius: 6px;
+    margin-top: 22px;
+    margin-left: -20px;
+    display: none;
+}
+
+.day-booking > h3 {
+    margin-bottom: 21px;
+}
+
+
+.select-block {
+    display: flex;
+}
+
+
+
+
+
+
+/*
+time-select
+*/
+
+.select-block > .time-select {
+    flex: 1;
+}
+
+.select-block > .time-select > .time-grid {
+    display: flex;
+}
+
+.select-block > .time-select > .time-grid > .time-column {
+    flex: 1;
+    max-width: max-content;
+}
+
+
+.select-block > .time-select > .time-grid > .time-column > div {
+    padding: 10px 15px 10px 15px;
+    color: gray;
+    border-radius: 6px;
+    text-align: center;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.select-block > .time-select > .time-grid > .time-column > .select-item {
+    cursor: pointer;
+    color: black;
+}
+
+
+.select-block > .time-select > .time-grid > .time-column > .select-item:hover {
+    background: #ffebae;
+}
+
+.select-block > .time-select > .time-grid > .time-column > .selected {
+    background: #ffebae;
+}
+
+
+
+
+
+
+/*
+service-select
+*/
+.select-block > .service-select {
+    flex: 1;
+}
+
+.select-block > .service-select > .service-grid > .service-item {
+    max-width: max-content;
+    padding: 10px 10px 10px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: -10px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.select-block > .service-select > .service-grid > .service-item:hover {
+    background: #ffebae;
+}
+
+.select-block > .service-select > .service-grid > .selected {
+    background: #ffebae;
+}
+
+
+
+
+
+/*
+contact-select
+*/
+.select-block > .contact-select {
+    flex: 1;
+}
+
+.select-block > .contact-select > div > input {
+    margin-bottom: 15px;
+    border: 1px solid gainsboro;
+    padding: 8px 8px 8px 15px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+
+
+
+
+
+/*
+button-select
+*/
+.button-select {
+    display: flex;
+    margin-top: 20px;
+}
+
+.button-select > .alert-block {
+    flex: 1;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+
+.button-select > .booking-btn {
+    flex: 1;
+    background: #27b1e7;
+    color: white;
+    border-radius: 6px;
+    padding: 15px 30px 15px 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    max-width: fit-content;
+}
+
+.button-select > .booking-btn:hover {
+    background: #308df1;
+}
+
+
+
+
+
+
+/*
+footer
+*/
+
+footer {
+    border-top: 1px solid gainsboro;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 100px;
+}
+
+
+footer .footer-block {
+    display: flex;
+}
+
+
+footer .footer-block > .footer-contacts > .contact-phone a {
+    color: black;
+    text-decoration: none;
+}
+
+
+footer .footer-block > .footer-links > .footer-info {
+    margin-bottom: 15px;
+}
+
+footer .footer-block > .footer-links > .footer-info > .footer-desc {
+    margin-bottom: 20px;
+}
+
+footer .footer-block > .footer-links > .footer-info > a {
+    margin-right: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid gainsboro;
+}
+
+
+
+footer .footer-contacts > .contact-item {
+    flex: auto;
+    margin-bottom: 7px;
+}
+
+
+footer .footer-contacts > .contact-item > div {
+    height: 20px;
+    width: 30px;
+    float: left;
+}
+
+
+footer .footer-contacts > .contact-item > .insta {
+    background: url(img/insta.svg) no-repeat;
+}
+
+
+footer .footer-contacts > .contact-item > .whatsapp {
+    background: url(img/whatsapp.svg) no-repeat;
+}
+
+footer .footer-contacts > .footer-rights {
+    margin-top: 31px;
+    font-size: smaller;
+    color: gray;
+}
+
+
+
+.footer-social {
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 3px;
+    height: 22px;
+}
+
+.footer-social > a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-social > a:hover {
+    color: black;
+}
+
+
+
+
+
+
+
+#haircut_block {
+    display: none;
+}
+
+
+#portfolio_block {
+    display: none;
+}
+
+#haircut_menu {
+    display: none;
+}
+
+#coloring_menu {
+    display: none;
+}
+
+
+/*
+.day-booking{
+    display: none;
+}
+*/
+
+
+
+
+
+
+
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    overflow-y: scroll;
+    width: 94%;
+    max-width: 1366px;
+    height: 94%;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.modal-container-image {
+    overflow-y: unset;
+    max-width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+.modal-header {
+    display: flex;
+}
+
+.modal-container h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    flex: 9;
+}
+
+.modal-header > .close-btn-block {
+    flex: 1;
+    float: right;
+    text-align: right;
+}
+
+.modal-header > .close-btn-block > .close-btn {
+    cursor: pointer;
+    float: right;
+    padding: 28px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.modal-header > .close-btn-block > .close-btn > .close-icon {
+    background-image: url(img/close.svg);
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.modal-header > .close-btn-block > .close-btn:hover {
+    background-color: #ffebae;
+}
+
+
+
+.modal-body {
+    margin: 20px 0;
+}
+
+.modal-default-button {
+    /*  float: right;*/
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+.modal-mask #show_image {
+    height: 100vh;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Мои работы*/
+
+.grid {
+    margin-top: 30px;
+    min-height: 330px;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 20%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.grid-item--gigante {
+    width: 320px;
+    height: 360px;
+    z-index: 2;
+    /* above other items */
+}
+
+
+
+
+/* ---- grid-item ---- */

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Окрашивание волос и женские стрижки в Сходне</title>
+    <meta name="description" content="Современные женские стрижки и колористика в Сходне, Химках и Зеленограде с онлайн-записью" />
+    <meta name="keywords" content="покрасить волосы, стрижки, парикмахерская, женские стрижки">
+
+
+    <link rel="stylesheet" type='text/css' href="assets/style.css">
+    <link rel="stylesheet" href="assets/likely.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+
+    <script src="assets/emerge.js"></script>
+    <script src="assets/likely.js"></script>
+    <script src="assets/dragscroll.js"></script>
+
+    <script src="assets/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/masonry.pkgd.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    
+
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(88162214, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/88162214" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    
+</head>
+
+
+
+<body>
+
+    <div id="vue_container">
+
+        <container>
+
+            <header>
+                <div class="logo">
+                    <a href="/">
+                        <img class="img" src="assets/img/logo.png" />
+                        <main>Александра Катунина
+                            <div class="desc">Парикмахер-колорист</div>
+                        </main>
+                    </a>
+                </div>
+
+                <div class="contacts-block">
+
+                    <a href="tel:+79773803724" class="contact-element" target="_blank">+7(977)380-37-24</a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=79773803724" class="contact-element" target="_blank">Вотсап</a>
+
+                    <a class="buy-element">
+                        <div class="img"></div>
+                        <div class="header-buy-btn" id="show-modal" @click="showModal = true">Записаться</div>
+                    </a>
+
+                    <a class="menu-element">
+                        <div class="img"></div>
+                        <div class="header-menu-btn" onclick="hide_contacts();">Контакты</div>
+                    </a>
+
+                </div>
+            </header>
+
+
+            <div id="contacts_mobile" class="no-visible">
+                <a href="#">
+                    <div class="contact-m-item" id="show-modal" @click="showModal = true">Записаться на сайте</div>
+                </a>
+                <a href="tel:+79773803724" class="" target="_blank">
+                    <div class="contact-m-item">Позвонить на телефон +7(977)380-37-24</div>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=79773803724" class="" target="_blank">
+                    <div class="contact-m-item">Написать в Вотсап</div>
+                </a>
+            </div>
+
+
+            <div class="promo-block">
+
+                <div class="promo-offer">
+                    <div class="promo-text">
+                        <div class="supertext">Окрашивание волос <br> и женские стрижки <span>в Сходне</span></div>
+                        <!--                        <div class="supertext-master">Мастер - Александра Катунина</div>-->
+                    </div>
+                </div>
+
+                <div class="promo-img" onclick="portfolio_load(this);">
+                    <div class="promo-img-src">
+                        <img v-bind:src="latest_work_image" alt="">
+                    </div>
+                    <div class="promo-img-desc">
+                        <span>{{latest_work_desc}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="main-content">
+
+                <nav class="noselect" id="service_nav">
+                    <div class="checkbox-item" id="haircut_0" onclick="haircuts_load(this);">Стрижки</div>
+                    <div class="checkbox-item" id="coloring_0" onclick="coloring_load(this);">Окрашивания</div>
+                    <div class="checkbox-item" onclick="portfolio_load(this);" id="nav_portfolio_item">Фото работ</div>
+                </nav>
+
+                <div id="haircut_block">
+
+                    <div class="module" id="haircut_menu">
+                        <div class="example__menuWrapper">
+                            <div class="example__menuLimiter is__shaded dragscroll">
+                                <menu class="example__menu ">
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item selected">
+                                            <div class="kare" id="haircut_0" onclick="service_load(this)">Каре</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="kaskad" id="haircut_1" onclick="service_load(this)">Боб-каре</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="bob" id="haircut_2" onclick="service_load(this)">Каскад</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="pixi" id="haircut_3" onclick="service_load(this)">Пикси</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="odna" id="haircut_4" onclick="service_load(this)">Одна длина</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="lesenka" id="haircut_5" onclick="service_load(this)">Лесенка у лица</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block">
+                                        <div class="catalog-item">
+                                            <div class="sesson" id="haircut_6" onclick="service_load(this)">Сэссон</div>
+                                        </div>
+                                    </li>
+                                </menu>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="module" id="coloring_menu">
+                        <div class="example__menuWrapper">
+                            <div class="example__menuLimiter is__shaded dragscroll">
+                                <menu class="example__menu coloring">
+                                    <li class="example__menu-item catalog-block color-royalblue">
+                                        <div class="catalog-item selected">
+                                            <div id="coloring_0" onclick="service_load(this)">В один тон</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-royalblue">
+                                        <div class="catalog-item ">
+                                            <div id="coloring_1" onclick="service_load(this)">Корни</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-deeppink">
+                                        <div class="catalog-item">
+                                            <div id="coloring_2" onclick="service_load(this)">Мелирование</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-deeppink">
+                                        <div class="catalog-item">
+                                            <div id="coloring_3" onclick="service_load(this)">Аэртач</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-blueviolet">
+                                        <div class="catalog-item">
+                                            <div id="coloring_4" onclick="service_load(this)">Блонд</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-blueviolet ">
+                                        <div class="catalog-item">
+                                            <div id="coloring_5" onclick="service_load(this)">Тонирование</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-tomato ">
+                                        <div class="catalog-item">
+                                            <div id="coloring_6" onclick="service_load(this)">Димаут</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-tomato ">
+                                        <div class="catalog-item">
+                                            <div id="coloring_7" onclick="service_load(this)">Контуринг</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-mediumturquoise ">
+                                        <div class="catalog-item">
+                                            <div id="coloring_8" onclick="service_load(this)">Шатуш</div>
+                                        </div>
+                                    </li>
+                                    <li class="example__menu-item catalog-block color-mediumturquoise ">
+                                        <div class="catalog-item">
+                                            <div id="coloring_9" onclick="service_load(this)">Балаяж</div>
+                                        </div>
+                                    </li>
+                                </menu>
+                            </div>
+                        </div>
+                    </div>                   
+                    
+
+                    <h1 class="mobile-h1">{{name}}</h1>
+                    <div class="content">
+
+                        <div class="promo">
+                            <svg class="spinner" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                <rect class="spinner__rect" x="0" y="0" width="100" height="100" fill="none"></rect>
+                                <circle class="spinner__circle" cx="50" cy="50" r="40" stroke="#999999" fill="none" stroke-width="6" stroke-linecap="round">
+                                </circle>
+                            </svg>
+                            <img class="emerge" v-bind:src="image_links" id="promo_img" alt="">
+                            <div class="desc">
+                                <div>{{image_desc}}</div>
+                                <div class="update noselect" onclick="img_next();">Ещё</div>
+                            </div>
+                        </div>
+
+                        <div class="catalog">
+                            <h1>{{name}}</h1>
+                            <div class="buy-block">
+                                <p>Стоимость: <span class="price">{{price}}</span></p>
+                                <p>{{description}}</p>
+                                <div class="hide-desc-btn noselect" onclick="hide_desc();">Важные подробности</div>
+                            </div>
+                            <div id="hide_desc_block" class="no-visible" v-html="service_desc"></div>
+                            <div class="buy-row noselect margintop-50">
+                                <a class="buy-element" id="show-modal" @click="showModal = true">
+                                    <div class="img"></div>
+                                    <div class="header-buy-btn">Выбрать время и записаться</div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="portfolio">
+                        <h2>Примеры {{name2}}</h2>
+                        <div id="pinterest_block" v-html="pinterest_block"></div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <div id="portfolio_block">
+                    <div class="example__menuWrapper">
+                        <div class="example__menuLimiter is__shaded dragscroll">
+                            <menu class="example__menu ">
+<!--
+                                <li class="example__menu-item catalog-block">
+                                    <div class="catalog-item selected">
+                                        <div class="no-icon" id="portfolio_1" onclick="photo_load(this)">Все работы</div>
+                                    </div>
+                                </li>
+-->
+                                <li class="example__menu-item catalog-block">
+                                    <div class="catalog-item">
+                                        <div class="colors" id="portfolio_2" onclick="photo_load(this)">Окрашивания</div>
+                                    </div>
+                                </li>
+                                <li class="example__menu-item catalog-block">
+                                    <div class="catalog-item">
+                                        <div class="cutter" id="portfolio_3" onclick="photo_load(this)">Стрижки</div>
+                                    </div>
+                                </li>
+                            </menu>
+                        </div>
+                    </div>
+                    <div id="portfolio_images" class="grid"></div>
+                </div>
+
+
+
+            </div>
+
+        </container>
+
+
+
+        <footer>
+            <container>
+                <div class="footer-block">
+                    <div class="footer-links">
+                        <div class="footer-info">
+                            <div class="footer-desc">Александра Катунина</div>
+                            <!--
+                        <a href="">О мастере</a>
+                        <a href="">Об используемой химии</a>
+-->
+                            <div class="likely">
+                                <div class="vkontakte">Поделиться</div>
+                                <div class="telegram" data-text="Зацени-ка">Отправить</div>
+                                <div class="odnoklassniki">Класснуть</div>
+                            </div>
+                            <!--                        <div class=footer-social><a href="">Политика обработки данных</a></div>-->
+                        </div>
+
+
+                    </div>
+                    <div class="footer-contacts">
+
+                        <!--
+                        <div class="contact-item">
+                            <div class="insta"></div> #katunina.alexandra
+                        </div>
+-->
+
+                        <div class="contact-item contact-phone">
+                            <a href="tel:+79773803724" target="_blank">+7 (977) 380-37-24</a>
+                        </div>
+
+                        <div class="footer-rights">
+                            © katuhair.ru, 2020...<span id="today_year"></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </container>
+        </footer>
+
+
+        <modal v-if="showModal" @close="showModal = false"></modal>
+
+        <modal2 v-if="showImage" @close="showImage = false"></modal2>
+
+    </div>
+
+    <div id="pinterest_script"></div>
+
+</body>
+
+
+
+<script src="assets/main.js"></script>
+
+<script type="text/x-template" id="modal-template">
+    <transition name="modal">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
+
+                    <div id="booking" class="booking">
+                        <div class="modal-header">
+                            <h2>Выберите любой день в ближайшие 2 недели</h2>
+                            <div class="close-btn-block"> 
+                            <div class="close-btn" @click="$emit('close')">
+                                <div class="close-icon"></div>
+                            </div>
+                        </div>
+                        </div>
+                       
+                        <div class="booking-block">
+                            <div class="day-calendar" v-html="day_list"></div>
+                            <div class="day-booking">
+                                
+                                <h2>Выберите время и услугу на <span id="title_booking"></span></h2>                           
+                                <div class="select-block">
+                                    <div class="time-select">
+                                        <div class="time-grid" v-html="time_str"></div>
+                                    </div>
+                                    <div class="service-select">
+                                        <div class="service-grid" v-html="service_str"></div>
+                                    </div>
+                                </div>
+                                
+                                <h2>Оставьте контактные данные</h2>  
+                                <div class="select-block">
+                                    <div class="contact-select">
+                                        <div><input type="text" id="booking-name" name="name" placeholder="Ваше имя"></div>
+                                        <div><input type="tel" id="booking-phone" name="phone" placeholder="Номер телефона" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></div>
+                                        <div class="smaller">*Мы не передаем данные никому</div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="button-select">
+                                    <div class="booking-btn noselect" onclick="booking_btn()">Записаться</div> <div class="alert-block"></div>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </transition>
+</script>
+
+<script type="text/x-template" id="modal-template-image">
+    <transition name="modal2">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container-image">
+
+                    <div id="booking" class="booking">
+
+                        <div class="close-btn" @click="$emit('close')">
+                            <div class="close-icon"></div>
+                            <img id="show_image" v-bind:src="image_url"></div>
+                        </div>
+                                
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </transition>
+</script>
+
+</html>
